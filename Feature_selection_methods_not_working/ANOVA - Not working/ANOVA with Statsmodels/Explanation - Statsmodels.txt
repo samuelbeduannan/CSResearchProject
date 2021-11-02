@@ -1,0 +1,7 @@
+1. Used Pandas to read the data from CSV file
+2. Used Statsmodels Library to build the model for ANOVA
+3. Worked perfectly, but it was comparing the two samples 
+   at a time in one way ANOVA and we wanted to compare
+   11 samples at a time to find the best features. 
+4. We decided not to use this library as it did not work 
+   the way we wanted to. 

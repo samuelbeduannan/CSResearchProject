@@ -1,0 +1,12 @@
+1. Used Pandas to read the data from CSV file
+2. Used Pingouin Library to build the model for ANOVA
+3. did work and showed that there are few groups of samples
+   that are different. 
+4. When performed post hoc tests, it did not work as our 
+   dataset had so many 0's and 1's in them which makes x and 
+   and y equal in most cases. So, the model did
+   not compute the t and p-value. 
+5. Hence, we decided to remove uncessary data from the dataset
+   and use those feature that are contributing most in the 
+   feature. If it will not work, we will use another library
+   for implementation.
