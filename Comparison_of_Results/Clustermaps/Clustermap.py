@@ -17,7 +17,7 @@ print("Original Data:\n")
 # print(data)
 
 print()
-OTUs_data = pd.read_csv('C:/Users/sam_bedu-annan/OneDrive - TransCanada Corporation/Desktop/CSResearchProject/Feature_selection_methods_working/Results/ANOVA/output_ANOVA_50.csv')
+OTUs_data = pd.read_csv('/Feature_selection_methods_working/Results/ANOVA/output_ANOVA_50.csv')
 # print(data[list(OTUs_data.OTUs)])
 x = data[list(OTUs_data.OTUs)]
 data_class = data.Samples
