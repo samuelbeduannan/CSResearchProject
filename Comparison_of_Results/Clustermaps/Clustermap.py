@@ -6,21 +6,21 @@ import numpy as np
 import time
 
 
-data = pd.read_csv('data.csv')
+data = pd.read_csv('data.csv') # read original dataset
 
 
 print("Original Data:\n")
 
 print()
-OTUs_data = pd.read_csv('/Feature_selection_methods_working/Results/ANOVA/output_ANOVA_50.csv')
-x = data[list(OTUs_data.OTUs)]
-data_class = data.Samples
+OTUs_data = pd.read_csv('filepath../output_ANOVA_50.csv') # read OTUs for each feature selection method
+x = data[list(OTUs_data.OTUs)] # get selected OTUs value from original dataset
+data_class = data.Samples # get 11 samples from original dataset
 print(x)
-x = pd.concat([x,data_class], axis=1)
+x = pd.concat([x,data_class], axis=1)  # combine dataframe of samples with data frame of OTUs and their values
 
-x = x.set_index('Samples')
+x = x.set_index('Samples') # change the combined dataframe's index to values of the Samples i.e Wheat_1, Wheat_2, Brassica_2, e.t.c
 
-x = np.transpose(x)
+x = np.transpose(x) # tranpose the data to have the OTUs' names as the new index and sample names as the new columns
 print(x)
 
 
@@ -28,8 +28,6 @@ print(x)
 """
 Cluster Map
 """
-# f, ax = plt.subplots(figsize=(20, 20))
-sns.clustermap(x)
-# # # sns.heatmap(x.corr(), annot=True)
+sns.clustermap(x) #create cluster map of the tranposed dataset
 plt.show()
 
