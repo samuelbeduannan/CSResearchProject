@@ -12,7 +12,7 @@ data = pd.read_csv('data.csv') # read original dataset
 print("Original Data:\n")
 
 print()
-OTUs_data = pd.read_csv('filepath../output_ANOVA_50.csv') # read OTUs for each feature selection method
+OTUs_data = pd.read_csv('filepath../fnames_200.csv') # read OTUs for each feature selection method
 x = data[list(OTUs_data.OTUs)] # get selected OTUs value from original dataset
 data_class = data.Samples # get 11 samples from original dataset
 print(x)
