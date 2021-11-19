@@ -23,7 +23,7 @@ y = [1,1,1,1,1,2,2,2,2,2,2]
 
 
 # Create an SelectKBest object to select features with best CHI-SQ F-Values
-fvalue_selector = SelectKBest(chi2, k=50)
+fvalue_selector = SelectKBest(chi2, k=200)
 
 #print(X.shape)
 
@@ -35,7 +35,7 @@ X_new = fvalue_selector.transform(X)
 #print(fvalue_selector.get_support(indices=True))
 
 # Show results
-print('Reduced number of features:', X_kbest.shape[1])
+#print('Reduced number of features:', X_kbest.shape[1])
 #print(X_kbest[0:11])
 #print(X_kbest.shape)
 #print(type(X_kbest))
@@ -46,10 +46,17 @@ df = pd.DataFrame(X_kbest)
 
 #get the scores for the selected features
 scores = fvalue_selector.scores_
-#print(scores)
+scores_p = fvalue_selector.pvalues_
+
+print(scores_p)
 
 #Let's get the selected feature names
 feature_names = list(X.columns[fvalue_selector.get_support(indices=True)])
-print(feature_names)
+#print(feature_names)
 
+
+abc= list(scores_p[fvalue_selector.get_support(indices=True)])
 features = str(feature_names)
+
+
+#pd.DataFrame(abc).to_csv("pvalue_200.csv")
