@@ -6,13 +6,14 @@ import numpy as np
 import time
 
 
+
 data = pd.read_csv('data.csv') # read original dataset
 
 
 print("Original Data:\n")
 
 print()
-OTUs_data = pd.read_csv('filepath../fnames_200.csv') # read OTUs for each feature selection method
+OTUs_data = pd.read_csv('C:/Users/sam_bedu-annan/OneDrive - TransCanada Corporation/Desktop/CSResearchProject/Feature_selection_methods_working/Results/SVM/SVM_Results_200.csv') # read OTUs for each feature selection method
 x = data[list(OTUs_data.OTUs)] # get selected OTUs value from original dataset
 data_class = data.Samples # get 11 samples from original dataset
 print(x)
@@ -28,6 +29,6 @@ print(x)
 """
 Cluster Map
 """
-sns.clustermap(x) #create cluster map of the tranposed dataset
+sns.clustermap(x, cmap="vlag") #create cluster map of the tranposed dataset
 plt.show()
 
