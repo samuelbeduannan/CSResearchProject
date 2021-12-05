@@ -1,0 +1,8 @@
+SciPy - 1.7.1
+Statsmodels - 0.12.2
+scikit-learn - 0.24.2
+Pingouin - 0.4.0
+Numpy - 1.20.3
+Pandas - 1.3.3
+Matplotlib - 3.4.2
+Seaborn - 0.11.2
